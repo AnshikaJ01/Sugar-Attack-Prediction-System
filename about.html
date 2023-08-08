@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Responsive Registaration Form</title>
+        
+        <script type="text/javascript" lang="javascript" src="./responsiveRegistaration.js"></script>
+        <style>
+            *{box-sizing: border-box;
+}
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 45%;
+    padding: 12px;
+    border: 1px solid rgb(221, 104, 54);
+    resize: vertical;
+}
+
+body{
+    background-color:rgb(221, 104, 54);
+    position:relative;
+    opacity:10;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position:center ;
+	opacity:10;
+}
+
+textarea{
+    width:45%;
+    padding: 12px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float:left;
+}
+
+.container{
+    border-radius: 5px;
+    max-width: 500px;
+	padding: 6px 25px;
+	margin: 50px auto;
+    padding-top: 32px;
+    padding-bottom: 21px;
+	border-radius: 8px;
+    background-color:white;
+    padding: 20px;
+}
+
+button
+{
+	position: relative;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	background:  #e38811;
+	font-size: 30px;
+	text-align: center;
+    width: 100%;
+	border-radius: 5px ;
+	border-width: 1px 1px 3px;
+	margin-bottom: 7px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+        </style>
+    </head>
+       
+    <body>
+
+    
+<form action="{{ url_for('predict')}}"method
+
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="name" placeholder="Enter Name" required="required" /><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="lname">Patient ID:</label>
+                    <input type="text" name="Patient ID" placeholder="Enter Patient ID" required="required" /><br><br>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="email" >Email:</label &nbsp;&nbsp;>
+                        <input type="email" id="email" name="email" placeholder="it should contain @,." required="required" ><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile:</label>
+                    <input type="text" name="Phone no." placeholder="only 10 digits are allowed" required="required" /><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="dob">Date Of Birth:</label>
+                    <input type="date" name="Date of Birth" placeholder="Enter your DOB" required="required" /><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="address">Glucose:</label>
+                    <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="city">Blood Presure:</label>
+                    <input type="text" id="city" name="Bp" placeholder="Blood Pressure" maxlength="10"><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="pincode">Insulin:</label>
+                    <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="state">BMI:</label>
+                    <input type="text" name="BMI" placeholder="BMI" required="required" /><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="state">Age:</label>
+                    <input type="text" name="Age" placeholder="Age" required="required" /><br><br>
+                </div>
+            </div>
+            
+        </div>  
+
+        <label for="w3review" class>Output:</label>
+<textarea id="w3review" name="w3review" rows="1" cols="50">
+    {{ prediction_text }}
+</textarea>
+<br><br>
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+       <br>
+       <br>
+      
+     </div>
+    </body>
+    </html> -->=
